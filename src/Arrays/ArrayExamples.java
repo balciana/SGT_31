@@ -1,3 +1,5 @@
+package Arrays;
+
 public class ArrayExamples {
     public static void main(String[] args) {
 
@@ -37,6 +39,7 @@ public class ArrayExamples {
              System.out.print(grades[i] + " ");
 
         }
+         //System.out.println(Arrays.toString(grades));
 
 
 
