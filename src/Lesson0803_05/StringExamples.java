@@ -1,4 +1,6 @@
-package Lesson0803;
+package Lesson0803_05;
+
+import java.util.Scanner;
 
 public class StringExamples {
     public static void main(String[] args) {
@@ -72,6 +74,30 @@ public class StringExamples {
      System.out.println(Double.parseDouble(doubleValue));
      System.out.println(Boolean.parseBoolean(boolValue));
      System.out.println(Long.parseLong(longValue));
+
+     //Trim method - istrina visus spaces pradzioje ir gale
+     System.out.println("    This is test    ".trim());
+
+     Scanner scanner = new Scanner(System.in);
+     //tikrinam ar atitinka paswordas su suvestu naudotojo
+     System.out.println("Please enter password (qwert*)");
+     String pswd = scanner.nextLine().trim().toLowerCase();
+     //trim -perskaitys ivesta reiksme ir padarys be tarpu
+    //toLowerCase - pavers viska mazosiomis raidemis
+
+     //prilyginti reiksmei naudojam equals methoda, grizta true or false
+     //tikrinimas jautrus tarpams
+     if (pswd.equals("qwerty")){
+      System.out.println("Password correct");
+     } else {
+      System.out.println("Incorrect password");
+
+     }
+
+
+
+
+
 
     }
 }
