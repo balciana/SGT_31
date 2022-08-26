@@ -34,25 +34,13 @@ public class HmwRockPaperScissors {
         if (isValid(choice1, choice2)) {
 
 
-            if ((choice1.equals("rock")) && (choice2.equals("scissors"))) {
+            if ((choice1.equals("rock")) && (choice2.equals("scissors")) || (choice1.equals("scissors")) && (choice2.equals("paper")) ||(choice1.equals("paper")) && (choice2.equals("rock"))) {
                 result = "Player 1 wins";
 
-            } else if ((choice1.equals("rock")) && (choice2.equals("paper"))) {
-                result = "Player 2 wins";
+            } else if ((choice1.equals("rock")) && (choice2.equals("paper")) || (choice1.equals("scissors")) && (choice2.equals("rock")) || (choice1.equals("paper")) && (choice2.equals("scissors"))) {
+                result = "Player 2 wins";}
 
-            } else if ((choice1.equals("scissors")) && (choice2.equals("rock"))) {
-                result = "Player 2 wins";
-
-            } else if ((choice1.equals("scissors")) && (choice2.equals("paper"))) {
-                result = "Player 1 wins";
-
-            } else if ((choice1.equals("paper")) && (choice2.equals("scissors"))) {
-                result = "Player 2 wins";
-
-            } else if ((choice1.equals("paper")) && (choice2.equals("rock"))) {
-                result = "Player 1 wins";
-
-            } else if ((choice1.equals(choice2))) {
+             else if ((choice1.equals(choice2))) {
                 result = "TIE";
 
             } else {
