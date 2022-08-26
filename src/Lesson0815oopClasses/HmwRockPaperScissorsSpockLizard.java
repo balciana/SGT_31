@@ -18,8 +18,8 @@ public class HmwRockPaperScissorsSpockLizard {
             this.choice1 = choice1;
         }
 
-        public String getChoice1() {
-            return choice1;
+        public String getChoice1(String choice1) {
+            return this.choice1;
         }
 
         public String getChoice2(String choice2) {
@@ -34,23 +34,19 @@ public class HmwRockPaperScissorsSpockLizard {
             String result = " ";
             if (isValid(choice1, choice2)) {
 
-
-                if ((choice1.equals("rock")) && (choice2.equals("scissors")) || (choice1.equals("scissors")) && (choice2.equals("paper")) ||(choice1.equals("paper")) && (choice2.equals("rock")) || (choice1.equals("rock")) && (choice2.equals("lizard")) || (choice1.equals("scissors")) && (choice2.equals("lizard")) || (choice1.equals("spock")) && (choice2.equals("rock")) || (choice1.equals("spock")) && (choice2.equals("scissors")) || (choice1.equals("lizard")) && (choice2.equals("paper")) || (choice1.equals("lizard")) && (choice2.equals("spock")) || (choice1.equals("paper")) && (choice2.equals("spock"))) {
+                if((choice1.equals(choice2))){
+                    result = "TIE";
+                } else if ((choice1.equals("rock")) && (choice2.equals("scissors")) || (choice1.equals("scissors")) && (choice2.equals("paper")) ||(choice1.equals("paper")) && (choice2.equals("rock")) || (choice1.equals("rock")) && (choice2.equals("lizard")) || (choice1.equals("scissors")) && (choice2.equals("lizard")) || (choice1.equals("spock")) && (choice2.equals("rock")) || (choice1.equals("spock")) && (choice2.equals("scissors")) || (choice1.equals("lizard")) && (choice2.equals("paper")) || (choice1.equals("lizard")) && (choice2.equals("spock")) || (choice1.equals("paper")) && (choice2.equals("spock"))) {
                     result = "Player 1 wins";
 
-                } else if ((choice1.equals("rock")) && (choice2.equals("paper")) || (choice1.equals("scissors")) && (choice2.equals("rock")) || (choice1.equals("paper")) && (choice2.equals("scissors")) || (choice1.equals("rock")) && (choice2.equals("spock")) || (choice1.equals("scissors")) && (choice2.equals("spock")) || (choice1.equals("spock")) && (choice2.equals("lizard")) || (choice1.equals("spock")) && (choice2.equals("paper")) || (choice1.equals("lizard")) && (choice2.equals("rock")) || (choice1.equals("lizard")) && (choice2.equals("scissors")) || (choice1.equals("paper")) && (choice2.equals("lizard"))) {
+                } else{
                     result = "Player 2 wins";}
 
-                else if ((choice1.equals(choice2))) {
-                    result = "TIE";
 
-                } else {
+            } else {
                     System.out.println("You put wrong values! Please enter \"rock\" or \"paper\" or \"scissors\" or \"spock\" or \"lizard\"");
                 }
 
-            } else {
-                System.out.println("You put wrong values! Please enter \"rock\" or \"paper\" or \"scissors\" or \"spock\" or \"lizard\"");
-            }
             return result;
         }
 
