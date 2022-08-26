@@ -24,8 +24,7 @@ public class HmwRockPaperScissors {
     public String getChoice2(String choice2) {
         return this.choice2;
     }
-
-    private boolean isValid(String choice1, String choice2){
+    private boolean isValid(String choice1, String choice2) {
         return (choice1.equals("rock") || choice1.equals("paper") || choice1.equals("scissors")) && (choice2.equals("rock") || choice2.equals("paper") || choice2.equals("scissors"));
     }
 
@@ -33,24 +32,21 @@ public class HmwRockPaperScissors {
         String result = " ";
         if (isValid(choice1, choice2)) {
 
-
-            if ((choice1.equals("rock")) && (choice2.equals("scissors")) || (choice1.equals("scissors")) && (choice2.equals("paper")) ||(choice1.equals("paper")) && (choice2.equals("rock"))) {
-                result = "Player 1 wins";
-
-            } else if ((choice1.equals("rock")) && (choice2.equals("paper")) || (choice1.equals("scissors")) && (choice2.equals("rock")) || (choice1.equals("paper")) && (choice2.equals("scissors"))) {
-                result = "Player 2 wins";}
-
-             else if ((choice1.equals(choice2))) {
+            if ((choice1.equals(choice2))) {
                 result = "TIE";
 
+            } else if ((choice1.equals("rock")) && (choice2.equals("scissors")) || (choice1.equals("scissors")) && (choice2.equals("paper")) || (choice1.equals("paper")) && (choice2.equals("rock"))) {
+                result = "Player 1 wins";
+
             } else {
-                System.out.println("You put wrong values! Please enter \"rock\" or \"paper\" or \"scissors\"");
+                result = "Player 2 wins";
             }
 
-        } else {
-            System.out.println("You put wrong values! Please enter \"rock\" or \"paper\" or \"scissors\"");
-        }
+
+        }else {System.out.println("You put wrong values! Please enter \"rock\" or \"paper\" or \"scissors\"");}
         return result;
     }
-
 }
+
+
+
